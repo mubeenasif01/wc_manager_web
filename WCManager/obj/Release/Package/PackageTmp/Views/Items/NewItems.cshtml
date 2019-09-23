@@ -1,0 +1,355 @@
+﻿@model WCManager.Models.New_Item
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WC Manager Dashboard</title>
+    <meta name="description" content="Wc Manager">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/Content/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="~/Content/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/Content/vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="~/Content/vendors/jqvmap/dist/jqvmap.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+    <link rel="stylesheet" href="~/Content/vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Content/vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href=""><img src="~/Content/images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="~/Content/images/logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <h3 class="menu-title">Menu</h3>
+                    <!-- /.menu-title -->
+                    <!--Items -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-dashboard"></i>Items</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-desktop"></i><a href="~/Items/AllItems">All Items</a></li>
+                            <li><i class="fa fa-desktop"></i><a href="~/ItemType/AllTypes">Categories</a></li>
+                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
+                            <li><i class="fa fa-share-square-o"></i><a href="ui-social-buttons.html">Social Buttons</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
+                            <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Alerts</a></li>
+                            <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Bars</a></li>
+                            <li><i class="fa fa-fire"></i><a href="ui-modals.html">Modals</a></li>
+                            <li><i class="fa fa-book"></i><a href="ui-switches.html">Switches</a></li>
+                            <li><i class="fa fa-th"></i><a href="ui-grids.html">Grids</a></li>
+                            <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Typography</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-dashboard"></i>Karigar</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-desktop"></i><a href="~/Karigar/AllKarigar">All Karigar</a></li>
+                            <li><i class="fa fa-desktop"></i><a href="">Karigar Khata</a></li>
+                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
+                            <li><i class="fa fa-share-square-o"></i><a href="ui-social-buttons.html">Social Buttons</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
+                            <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Alerts</a></li>
+                            <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Bars</a></li>
+                            <li><i class="fa fa-fire"></i><a href="ui-modals.html">Modals</a></li>
+                            <li><i class="fa fa-book"></i><a href="ui-switches.html">Switches</a></li>
+                            <li><i class="fa fa-th"></i><a href="ui-grids.html">Grids</a></li>
+                            <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Typography</a></li> -->
+                        </ul>
+                    </li>
+
+                    <!--Expenses -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-dashboard"></i>Expenses</a>
+                        <!-- <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>
+                        <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Badges</a></li>
+                        <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
+                        <li><i class="fa fa-share-square-o"></i><a href="ui-social-buttons.html">Social Buttons</a></li>
+                        <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
+                        <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Alerts</a></li>
+                        <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Bars</a></li>
+                        <li><i class="fa fa-fire"></i><a href="ui-modals.html">Modals</a></li>
+                        <li><i class="fa fa-book"></i><a href="ui-switches.html">Switches</a></li>
+                        <li><i class="fa fa-th"></i><a href="ui-grids.html">Grids</a></li>
+                        <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Typography</a></li>
+                        </ul> -->
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+    <!-- Left Panel -->
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="~/Content/images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href=""><i class="fa fa-user"></i> Change Password</a>
+                            <a class="nav-link" href="~/Authentication/Logout"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Add New Item</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New items Form-->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>New Item</strong>
+                </div>
+                <div class="card-body card-block">
+                    <form action="SaveItem" method="post" enctype="multipart/form-data" class="form-horizontal">
+
+
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Tag No</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="I_tag_no" name="I_tag_no" value="@Model.I_tag_no" placeholder="Text" class="form-control"><small class="form-text text-muted">Tag No not editable</small></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Status</label></div>
+                            <div class="col-12 col-md-9">
+                                <select name="I_status" id="I_status" class="form-control">
+                                    <option value="Stock">Stock</option>
+                                    <option value="Sold">Sold</option>
+                                </select><small class="form-text text-muted">Select Status</small>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Purchase Price</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="I_Pprice" name="I_Pprice" placeholder="Text" class="form-control"><small class="form-text text-muted">Add only Number values</small></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Expected Price</label></div>
+                            <div class="col-12 col-md-9"><input type="text" id="I_Eprice" name="I_Eprice" placeholder="Text" class="form-control"><small class="form-text text-muted">Add only Number values</small></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="select" class=" form-control-label">Category</label></div>
+                            <div class="col-12 col-md-9">
+                                <select name="I_type_id" id="I_type_id" class="form-control">
+                                    @foreach (var Categories in Model.Iobj)
+                                    {
+                                        <option value="@Categories.I_type_id">@Categories.I_type_name</option>
+                                    }
+                                </select><small class="form-text text-muted">Select Category</small>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="select" class=" form-control-label">Karigar</label></div>
+                            <div class="col-12 col-md-9">
+                                <select name="I_Karigar_id" id="I_Karigar_id" class="form-control">
+                                    @foreach (var Karigar in Model.Kobj)
+                                    {
+                                        <option value="@Karigar.K_id">@Karigar.K_name</option>
+                                    }
+                                </select><small class="form-text text-muted">Select Karigar</small>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="select" class=" form-control-label">Click Image</label></div>
+                            <div>
+                                <div class="col-12 col-md-6">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div id="my_camera"></div>
+                                            <!-- A button for taking snaps -->
+                                            <br>
+                                            <input type="button" id="click" class="btn btn-success" value="Take Snapshot" onClick="take_snapshot()">
+                                            <h1 id="imageNumber"></h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="panel panel-default">
+                                        <br>
+                                        <div class="panel-heading">Captured Photo</div>
+                                        <div class="panel-body">
+                                            <div id="results">Your captured image will appear here...</div>
+                                        </div>
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label for="text-input" class=" form-control-label">Pics Names</label></div>
+                            <div class="col-12 col-md-9"><input type="text" required id="I_Pic1" name="I_Pic1" placeholder="Text" class="form-control"><label> </label> <small class="form-text text-muted">This is a help text</small></div>
+                        </div>
+
+
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fa fa-dot-circle-o"></i> Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- .content -->
+    </div><!-- /#right-panel -->
+    <!-- Right Panel -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="~/Content/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="~/Content/vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/Content/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/Content/assets/js/main.js"></script>
+    <script src="~/Content/assets/js/dashboard.js"></script>
+    <script src="~/Content/assets/js/widgets.js"></script>
+    <script src="~/Content/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="~/Content/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="~/Content/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/Content/webcamjs/webcam.js"></script>
+
+    <script>
+        (function ($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+    <!-- Configure a few settings and attach camera -->
+    <script language="JavaScript">
+        Webcam.set({
+            width: 320,
+            height: 240,
+            image_format: 'jpeg',
+            jpeg_quality: 90
+        });
+        Webcam.attach('#my_camera');
+    </script>
+    <!-- Code to handle taking the snapshot and displaying it locally -->
+    <script language="JavaScript">
+        var Names = "";
+        var Number = 1;
+        var tag = document.getElementById('I_tag_no').value;
+        document.getElementById('I_Pic1').readOnly = true;
+        document.getElementById('I_tag_no').readOnly = true;
+
+        function saveBtn() {
+            
+        }
+        function take_snapshot() {
+            // take snapshot and get image data
+            Webcam.snap(function (data_uri) {
+                // display results in page
+                document.getElementById('results').innerHTML =
+                    '<img id="fileInput" src="' +
+                    data_uri +
+                    '"/>';
+
+                //Webcam.upload(data_uri,
+                //    '/Camera/Capture',
+                //    function (code, text) {
+                //        alert('Photo Captured');
+                //    });
+                
+                var file = document.getElementById("fileInput").src;
+                var formdata = new FormData();
+                formdata.append("base64image", data_uri);
+                formdata.append("Number", Number);
+                formdata.append("tag", tag);
+
+
+                $.ajax({
+                    url: "/Items/SaveImage",
+                    type: "POST",
+                    data: formdata,
+                    processData: false,
+                    contentType: false,
+                    success(data) {
+                        Names += data + ",";
+                        $('#I_Pic1').val(Names);
+                        console.log(Names);
+                        Number = Number + 1;
+                    }
+                    
+                });
+                document.getElementById("imageNumber").innerHTML = Number;
+                if(Number == 5)
+                    {
+                    document.getElementById("click").disabled = true;
+
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
+
