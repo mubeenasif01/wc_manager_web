@@ -18,14 +18,41 @@ namespace WCManager.Controllers
     {
         string cs = ConfigurationManager.ConnectionStrings["DBconString"].ConnectionString;
         string picAddress = "";
-        //string temptag = "";
+        string temptag = "";
         // GET: Items
         public ActionResult AllItems()
         {
+            string query = "SELECT [I].[I_tag_no],[I].[I_status],[I].[I_Pprice],[I].[I_Edate],[I].[I_Pic1],[T].[I_type_name] ,[K].[K_name] FROM(([Items] [I] INNER JOIN [Item_type] [T] ON[I].[I_type_id] = [T].[I_type_id]) INNER JOIN[Karigar] [K] ON[I].[I_Karigar_id] = [K].[K_id])";
 
+            List<All_Items> obj = new List<All_Items>();
+            using (SqlConnection con = new SqlConnection(cs))
+            {
 
+                //    //Authorization
+                using (SqlCommand cmd = new SqlCommand(query))
+                {
+                    cmd.Connection = con;
+                    // opening connection  
+                    con.Open();
+                    cs = con.State.ToString();
+                    SqlDataReader sdr = cmd.ExecuteReader();
 
-            return View();
+                    while (sdr.Read())
+                    {
+
+                        All_Items np = new All_Items();
+
+                        np.I_tag_no = (int)sdr["I_tag_no"];
+                        np.I_Pic1 = (string)sdr["I_Pic1"];
+                        np.I_status = (string)sdr["I_status"];
+                        np.I_type_name = (string)sdr["I_type_name"];
+                        np.K_name = (string)sdr["K_name"];
+                        obj.Add(np);
+
+                    }
+                }
+            }
+            return View(obj);
         }
 
         public ActionResult NewItems()
