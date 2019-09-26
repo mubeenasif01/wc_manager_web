@@ -107,6 +107,10 @@
     <Content Include="Content\assets\js\init-scripts\vector-map\vector.init.js" />
     <Content Include="Content\assets\js\main.js" />
     <Content Include="Content\assets\js\widgets.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\20190917_114401.jpeg" />
     <Content Include="Content\images\20190917_114406.jpeg" />
     <Content Include="Content\images\20190917_114408.jpeg" />
@@ -223,6 +227,7 @@
     <Content Include="Content\images\placeholder.png" />
     <Content Include="Content\images\twitter_corner_black.png" />
     <Content Include="Content\images\twitter_corner_blue.png" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\vendors\animate.css\animate.css" />
     <Content Include="Content\vendors\animate.css\animate.min.css" />
     <Content Include="Content\vendors\animate.css\gulpfile.js" />
@@ -2066,7 +2071,16 @@
     <Content Include="Content\webcamjs\webcam.js" />
     <Content Include="Content\webcamjs\webcam.min.js" />
     <Content Include="Content\webcamjs\webcam.swf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2710,6 +2724,14 @@
     <Content Include="Content\webcamjs\LICENSE" />
     <Content Include="Content\webcamjs\package.json" />
     <Content Include="Content\webcamjs\README.md" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Views\Authentication\Login.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
@@ -2718,6 +2740,10 @@
     <Content Include="Views\ItemType\AllTypes.cshtml" />
     <Content Include="Views\Karigar\AllKarigar.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

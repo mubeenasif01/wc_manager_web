@@ -39,7 +39,7 @@ namespace WCManager.Controllers
                         Karigar np = new Karigar();
                         np.K_id = (int)sdr["K_id"];
                         np.K_name = (string)sdr["K_name"];
-                        np.K_phone = (int)sdr["K_phone"];
+                        np.K_phone = (string)sdr["K_phone"];
                         np.K_address = (string)sdr["K_address"];
                         obj.Add(np);
 

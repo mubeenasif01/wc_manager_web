@@ -9,7 +9,7 @@ namespace WCManager.Models
     {
         public int K_id { get; set; }
         public string K_name { get; set; }
-        public int K_phone { get; set; }
+        public string K_phone { get; set; }
         public string K_pic { get; set; }
         public string K_address { get; set; }
 
